@@ -1,0 +1,77 @@
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #fc4a1a, #f7b733);
+}
+
+.circles {
+    position: absolute;
+    height: 270px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .circle-1 {
+    height: 360px;
+    width: 360px;
+    top: 232px;
+    left: 250px;
+    opacity: 0.8;
+    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+    animation-iteration-count: infinite;
+    animation-name: float;
+    -webkit-animation-name: float;
+    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+    animation-direction: alternate;
+    
+  }
+  
+  .circle-2 {
+    height: 360px;
+    width: 360px;
+    bottom: 160px;
+    right: 280px;
+    opacity: 0.8;
+    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+    animation-iteration-count: infinite;
+    animation-name: float;
+    -webkit-animation-name: float;
+    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+  }
+
+  @keyframes float {
+
+    0% {
+      -webkit-transform: rotateX(0deg) translateY(0px);
+      -moz-transform: rotateX(0deg) translateY(0px);
+      -ms-transform: rotateX(0deg) translateY(0px);
+      -o-transform: rotateX(0deg) translateY(0px);
+      transform: rotateX(0deg) translateY(0px);
+      }
+  
+    50% {
+      -webkit-transform: rotateX(0deg) translateY(1px) translateX(5px);
+      -moz-transform: rotateX(0deg) translateY(10px) translateX(5px);
+      -ms-transform: rotateX(0deg) translateY(30px) translateX(5px);
+      -o-transform: rotateX(0deg) translateY(40px) translateX(5px);
+      transform: rotateX(0deg) translateY(10px) translateX(5px);
+  }
+    100% {
+      -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+      -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+      -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+      -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+      transform: rotateX(0deg) translateY(0px) translateX(1px);
+    }
+  
+  }

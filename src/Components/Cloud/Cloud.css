@@ -1,0 +1,69 @@
+.cloud {
+	width: 80px;
+	height: 30px;
+	left: 10px;
+	top: 42px;
+	border-radius: 15px;
+    position: absolute;
+    background: #ffff;
+}
+.cloud:before {
+	content:'';
+	width: 20px;
+	height: 22px;
+	left: 13px;
+	top: -12px;
+	border-radius: 10px;
+	z-index: 20;
+    background: #ffff;
+    position: absolute;
+}
+.cloud:after {
+	content:'';
+	width: 40px;
+	height: 40px;
+	right: 13px;
+	top: -21px;
+	border-radius: 20px;
+	z-index: 20;
+    background: #ffff;
+    position: absolute;
+}
+
+.cloud2 {
+	width: 80px;
+	height: 30px;
+	left: 116px;
+    top: 89px;
+	border-radius: 15px;
+    position: absolute;
+    background: #ffff;
+}
+.cloud2:before {
+	content:'';
+	width: 20px;
+	height: 22px;
+	left: 13px;
+	top: -12px;
+	border-radius: 10px;
+	z-index: 20;
+    background: #ffff;
+    position: absolute;
+}
+.cloud2:after {
+	content:'';
+	width: 40px;
+	height: 40px;
+	right: 13px;
+	top: -21px;
+	border-radius: 20px;
+	
+    background: #ffff;
+    position: absolute;
+}
+
+.container-cloud{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
