@@ -9,14 +9,77 @@
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(35px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
     padding: 30px 30px 30px 30px;
     overflow: hidden;
     z-index: 1;
+    
 }
 
+.card{
+    width: 100%;
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+        height: 100%;
+}
 
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.input{
+    width: 50%;
+    height: 30%;
+    border-radius: 30px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    margin: 10px;
+    color: #1a7cfc;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a7cfc;
+    cursor: pointer;
+}
+
+.material-symbols-outlined{
+    opacity: 0.7;
+}
+
+.city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 3px;
+    border-radius: 30px;
+    height: 100%;
+}
+
+.propriete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
