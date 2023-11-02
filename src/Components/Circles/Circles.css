@@ -11,8 +11,17 @@
   top: 32%;
   left: 35%;
   transform: translate(-50%, -50%);
-  animation: bounce-in-left 1s both;
+  animation: bounce-in-left 1s both, fadeIn 1s ease-in-out;
 }
+
+@keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
 
 @keyframes bounce-in-left {

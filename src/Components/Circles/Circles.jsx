@@ -2,9 +2,9 @@ import './Circles.css';
 
 function Circles () {
     return (
-        <div class="circles">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
+        <div className="circles">
+        <div className="circle circle-1"></div>
+        <div className="circle circle-2"></div>
     </div> 
     )
 };
