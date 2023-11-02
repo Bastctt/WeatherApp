@@ -12,7 +12,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 35%;
     height: 80%;
     display: flex;
     justify-content: center;
@@ -83,14 +83,14 @@ button {
 }
 
 .city{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
     background: rgba(223, 223, 223, 0.1);
     margin-top: 3px;
     border-radius: 30px;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .propriete{
@@ -98,4 +98,42 @@ button {
     justify-content: center;
     align-items: center;
     height: 80%;
+}
+
+.weather-info{
+    display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: default;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
+.city-data{
+    color: #1a7cfc;
+}
+
+.description{
+    color: #1a7cfc;
+    text-transform: capitalize;
+}
+
+.temperature{
+    color: #1a7cfc;
 }

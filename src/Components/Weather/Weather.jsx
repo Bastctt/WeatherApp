@@ -7,9 +7,6 @@ function Weather() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-  
-    console.log("City:", city);
-    console.log("API Key:", process.env.REACT_APP_API_KEY);
 
     try {
       const response = await fetch(
@@ -18,6 +15,7 @@ function Weather() {
 
       if (response.ok) {
         const data = await response.json();
+        data.main.temp = (data.main.temp - 273.15).toFixed(2);
         setWeatherData(data);
       } else {
         console.error("City not found");
@@ -40,14 +38,16 @@ function Weather() {
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
-          <button type="submit"> <span className="material-symbols-outlined">search</span></button>
+          <button type="submit">
+            <span className="material-symbols-outlined">search</span>
+          </button>
         </form>
         <div className="city">
           {weatherData && (
             <div className="weather-info">
-              <h2>{weatherData.name}</h2>
-              <p>Temperature: {weatherData.main.temp} °C</p>
-              <p>Weather: {weatherData.weather[0].description}</p>
+              <p >{weatherData.weather[0].description}</p>
+              <p className="temperature">{weatherData.main.temp} °C</p>
+              <h2 className="city-data">{weatherData.name}</h2>
             </div>
           )}
         </div>
@@ -58,4 +58,7 @@ function Weather() {
 }
 
 export default Weather;
+
+
+
 
