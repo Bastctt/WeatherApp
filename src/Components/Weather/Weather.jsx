@@ -45,7 +45,7 @@ function Weather() {
         <div className="city">
           {weatherData && (
             <div className="weather-info">
-              <p >{weatherData.weather[0].description}</p>
+              <p className="description">{weatherData.weather[0].description}</p>
               <p className="temperature">{weatherData.main.temp} °C</p>
               <h2 className="city-data">{weatherData.name}</h2>
             </div>
