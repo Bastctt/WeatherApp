@@ -4,6 +4,7 @@ import "./Weather.css";
 function Weather() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,12 @@ function Weather() {
       if (response.ok) {
         const data = await response.json();
         data.main.temp = (data.main.temp - 273.15).toFixed(2);
-        setWeatherData(data);
+
+        setFadeOut(true);
+        setTimeout(() => {
+          setWeatherData(data);
+          setFadeOut(false);
+        }, 500);
       } else {
         console.error("City not found");
       }
@@ -44,7 +50,7 @@ function Weather() {
         </form>
         <div className="city">
           {weatherData && (
-            <div className="weather-info">
+            <div className={`weather-info ${fadeOut ? "fade-out" : ""}`}>
               <p className="description">{weatherData.weather[0].description}</p>
               <p className="temperature">{weatherData.main.temp} °C</p>
               <h2 className="city-data">{weatherData.name}</h2>
@@ -58,6 +64,8 @@ function Weather() {
 }
 
 export default Weather;
+
+
 
 
 
