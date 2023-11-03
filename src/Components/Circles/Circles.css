@@ -92,7 +92,9 @@
   -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
   animation-direction: alternate;
+  animation: bounce-in-top 1.1s ease-in-out both;
 }
+
 
 .circle-2 {
   height: 360px;
@@ -124,3 +126,8 @@
       transform: translateY(0px) translateX(5px);
   }
 }
+
+
+@media screen and (min-width: 320px) {
+        
+    }

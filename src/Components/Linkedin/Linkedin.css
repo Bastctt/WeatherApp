@@ -38,3 +38,9 @@ footer {
     height: 45px;
     opacity: 0.4;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    footer{
+        bottom: 50px;
+    }
+}
